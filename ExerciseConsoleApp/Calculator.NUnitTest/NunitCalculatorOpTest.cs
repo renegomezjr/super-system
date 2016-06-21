@@ -3,15 +3,23 @@
 
 namespace Calculator.NUnitTest
 {
-
+    
     [TestFixture]
     public class NunitCalculatorOpTest
     {
+        CalculatorOp sut;
+
+        [SetUp]
+        public void TestSetUp()
+        {
+            sut = new CalculatorOp();
+        }
+
         [Test]
         public void NunitAddReturnNineWhenPassedFiveAndFour()
         {
             //Arrange
-            CalculatorOp sut = new CalculatorOp();
+            //CalculatorOp sut = new CalculatorOp();
             //Act
             int result = sut.Add(4, 5);
             //Assert
@@ -38,6 +46,12 @@ namespace Calculator.NUnitTest
             int result = sut.Sub(5, 4);
             //Assert
             Assert.That(result, Is.EqualTo(1));
+        }
+
+        [TearDown]
+        public void TestTearDown()
+        {
+            sut = null;
         }
     }
 }
