@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calcula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.NUnitTest", "Calculator.NUnitTest\Calculator.NUnitTest.csproj", "{2700808F-D683-49FE-BD28-9018A8747A25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "..\TowerDefense\TowerDefense\TowerDefense.csproj", "{731E88A7-5601-4F1B-9D1D-E5A0A08CD836}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2700808F-D683-49FE-BD28-9018A8747A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2700808F-D683-49FE-BD28-9018A8747A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2700808F-D683-49FE-BD28-9018A8747A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731E88A7-5601-4F1B-9D1D-E5A0A08CD836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731E88A7-5601-4F1B-9D1D-E5A0A08CD836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731E88A7-5601-4F1B-9D1D-E5A0A08CD836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731E88A7-5601-4F1B-9D1D-E5A0A08CD836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
