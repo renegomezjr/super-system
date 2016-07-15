@@ -1,4 +1,5 @@
-﻿using ComicBookMVC.Models;
+﻿using ComicBookMVC.Data;
+using ComicBookMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,24 +10,19 @@ namespace ComicBookMVC.Controllers
 {
     public class ComicBooksController : Controller
     {
-        public ActionResult Detail()
-        {
-            ComicBook comicBook = new ComicBook();
-            comicBook.SeriesTitle = "The Amazing Spider-Man";
-            comicBook.IssueNumber = 700;
-            comicBook.DescriptionHtml = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
-            Artist[] artists =
-                {
-                    new Artist() {Name = "Dan Slott", Role = "Script" },
-                    new Artist() {Name = "Humberto Ramos", Role = "Pencils" },
-                    new Artist() {Name = "Victor Olazaba", Role = "Inks" },
-                    new Artist() {Name = "Edgar Delgado", Role = "Colors" },
-                    new Artist() {Name = "Chris Eliopoulos", Role = "Letters" }
-                };
-            comicBook.Artists = artists;
+        private ComicBookRepository _comicBookRepository = null;
 
-            
-            return View(comicBook);   
+        public ComicBooksController()
+        {
+            this._comicBookRepository = new ComicBookRepository();
+        }
+        public ActionResult Detail(int? id)
+        {
+            if(id == null)
+            {
+                return HttpNotFound();
+            }
+            return View(_comicBookRepository.GetComicBook(id.Value));   
         }
     }
 }
